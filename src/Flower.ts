@@ -11,5 +11,7 @@ export class Flower {
         this.price = price;
     }
 
-    public updateStock(): void {}
+    public updateStock(): void {
+        
+    }
 }
