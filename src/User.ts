@@ -17,6 +17,12 @@ export abstract class User {
     }
 
     public logout(): void {
-        
+        if (!this.loggedIn) {
+            console.log("Logout failed: User is not logged in.");
+            return;
+        }
+
+        this.loggedIn = false;
+        console.log(`${this.name} logged out successfully.`);
     }
 }
