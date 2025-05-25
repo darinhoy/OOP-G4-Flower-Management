@@ -8,7 +8,7 @@ import { PaymentType } from "./PaymentType";
 
 // Create users
 const admin = new Admin(1, "Admin1", "adminpass");
-const customer = new Customer(2, "YaYa", "dar123", "Flower Street");
+const customer = new Customer(2, "YaYa", "dar123", "371 Street");
 
 // Login
 admin.login();
