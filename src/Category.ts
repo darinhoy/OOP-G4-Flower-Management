@@ -1,9 +1,17 @@
 export class Category {
-    constructor(
-        private name: string
-    ){}
+    private categories: string[] = [];
 
-    public addCategory(): void {};
+    constructor(private name: string) {
+        this.categories.push(name);
+    }
 
-    public removeCategory(): void{};
+    public addCategory(categoryName: string): void {
+        this.categories.push(categoryName);
+        console.log(`Category "${categoryName}" added.`);
+    }
+
+    public removeCategory(categoryName: string): void {
+        this.categories = this.categories.filter(c => c !== categoryName);
+        console.log(`Category "${categoryName}" removed.`);
+    }
 }

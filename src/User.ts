@@ -25,4 +25,8 @@ export abstract class User {
         this.loggedIn = false;
         console.log(`${this.name} logged out successfully.`);
     }
+
+    public getName(): string {
+        return this.name;
+    }
 }

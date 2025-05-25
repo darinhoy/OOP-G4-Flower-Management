@@ -1,13 +1,19 @@
-import { Customer } from "./Customer";
 import { Flower } from "./Flower";
 
 export class Cart {
-    constructor(private items: Flower[] = []){
+    constructor(private items: Flower[] = []) {}
 
+    public addItems(flower: Flower): void {
+        this.items.push(flower);
+        console.log(`Added ${flower.getName()} to cart.`);
     }
-    
 
-    public addItems(): void{};
+    public removeItems(flowerId: number): void {
+        this.items = this.items.filter(f => f.getId() !== flowerId);
+        console.log(`Removed flower with ID this.flower from cart.`);
+    }
 
-    public removeItems(): void{};
+    public getItems(): Flower[] {
+        return this.items;
+    }
 }
